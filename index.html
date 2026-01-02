@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 5 HTML Validation and simple css</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<form>
+
+  <h1>Student Registration Form</h1>
+  <p>All fields marked * are mandatory</p>
+  <hr>
+
+ 
+  <fieldset>
+    <legend>Personal Details*</legend>
+
+    <label>Full Name:</label><br>
+    <input type="text" name="name" required minlength="3"><br><br>
+
+    <label>Date of Birth:</label><br>
+    <input type="date" name="dob" required><br><br>
+
+    <label>Age:</label><br>
+    <input type="number" name="age" min="1" max="100" required><br><br>
+
+    <label>Gender:</label><br>
+    <input type="radio" name="gender" required> Male<br>
+    <input type="radio" name="gender"> Female<br>
+    <input type="radio" name="gender"> Other<br>
+  </fieldset>
+
+  <br>
+
+
+  <fieldset>
+    <legend>Contact Details*</legend>
+
+    <label>Email:</label><br>
+    <input placeholder="example@gmail.com" type="email" name="email" required><br><br>
+
+    <label>Mobile Number:</label><br>
+    <input placeholder="your phone no." type="tel" name="mobile" pattern="[0-9]{10}" title="Enter valid 10 digit number please" required><br><br>
+
+    <label>Address:</label><br>
+    <textarea placeholder="Type Your address here" name="address" required minlength="10"></textarea>
+  </fieldset>
+
+  <br>
+
+ 
+  <fieldset>
+    <legend>Academic Details</legend>
+
+    <label>Highest Qualification:</label><br>
+    <select name="qualification">
+      <option value="">Select</option>
+      <option>12th</option>
+      <option>Graduation</option>
+      <option>Post Graduation</option>
+    </select><br><br>
+
+    <label>Year of Study:</label><br>
+    <select name="year">
+      <option value="">Select</option>
+      <option>2022</option>
+      <option>2023</option>
+      <option>2024</option>
+      <option>2025</option>
+      <option>2026</option>
+    </select>
+  </fieldset>
+
+  <br>
+
+  
+  <fieldset>
+    <legend>Skills & Interests</legend>
+
+    <input type="checkbox" name="skills" value="HTML"> HTML<br>
+    <input type="checkbox" name="skills" value="CSS"> CSS<br>
+    <input type="checkbox" name="skills" value="JavaScript"> JavaScript<br>
+  </fieldset>
+
+  <br>
+
+ 
+  <fieldset>
+    <legend>Account Details*</legend>
+
+    <label>Username:</label><br>
+    <input type="text" name="username" required><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" name="password" minlength="6"
+           title="Minimum 6 characters" required><br><br>
+
+    <label>Confirm Password:</label><br>
+    <input type="password" name="confirm_password" minlength="6" required>
+  </fieldset>
+
+  <br>
+
+  
+  <fieldset>
+    <legend>Upload Files</legend>
+
+    <label>Profile Picture:*</label><br>
+    <input type="file" name="profile_pic"><br><br>
+
+    <label>Documents (optional):</label><br>
+    <input type="file" name="docs" accept=".pdf,.doc,.docx">
+  </fieldset>
+
+  <br>
+
+  
+  <fieldset>
+    <legend>Terms & Conditions</legend>
+    <input type="checkbox" name="terms" required>
+    I agree to the terms and conditions *
+  </fieldset>
+
+  <br>
+
+  <button type="submit">Submit</button>
+  <button type="reset">Reset</button>
+
+</form>
+
+</body>
+</html>
